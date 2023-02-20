@@ -54,10 +54,10 @@ public class lab4 {
         System.out.print("These are you previos transactions:- {");
         for(int j=0;j<i;j++){
             System.out.print("{");
-            for(int k=0;k<4;k++){
+            for(int k=0;k<3;k++){
                 System.out.print(transact[j][k]+",");
             }
-            System.out.print("}");
+            System.out.print(transact[j][3]+"}");
         }
         System.out.println("}");
     }
