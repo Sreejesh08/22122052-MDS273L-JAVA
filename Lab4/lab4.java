@@ -66,7 +66,11 @@ public class lab4 {
     }
 
     static void transaction(String[][] transact,int i){
-        System.out.print("These are you previos transactions:- {");
+        if(transact[0][0] == null){
+            System.out.println("There are no transactions yet!");
+        }
+        else{
+        System.out.print("These are you previous transactions:- {");
         for(int j=0;j<i;j++){
             System.out.print("{");
             for(int k=0;k<4;k++){
@@ -76,6 +80,7 @@ public class lab4 {
             System.out.println();
         }
         System.out.println("}");
+        }
     }
 
     static void summary(){
