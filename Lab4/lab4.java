@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 public class lab4 {
@@ -21,21 +23,26 @@ public class lab4 {
     static String[] deposit(){
         float dep;
         float copy;
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
         String[] depo = new String[1024];
         System.out.println("Enter the Amount you want to deposit :- ");
         dep = scan1.nextInt();
         copy=Bal;
         Bal = Bal+dep;
-        depo[0] = "Deposit";
-        depo[1] = Float.toString(copy);
-        depo[2] = String.valueOf(dep);
-        depo[3] = Float.toString(Bal);
+        depo[0] = dtf.format(now);
+        depo[1] = "Deposit";
+        depo[2] = Float.toString(copy);
+        depo[3] = String.valueOf(dep);
+        depo[4] = Float.toString(Bal);
         return depo;
     }
 
     static  String[] withdraw(){
         float wit, copy;
         String[] depo = new String[1024];
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();
         System.out.println("Enter the Amount you want to withdraw :- ");
         wit = scan1.nextInt();
         copy=Bal;
@@ -43,10 +50,11 @@ public class lab4 {
             System.out.println("You don't have enough balance!!! ");    
         else
             Bal = Bal-wit;
-        depo[0] = "Deposit";
-        depo[1] = Float.toString(copy);
-        depo[2] = String.valueOf(wit);
-        depo[3] = Float.toString(Bal);
+        depo[0] = dtf.format(now);
+        depo[1] = "Withdraw";
+        depo[2] = Float.toString(copy);
+        depo[3] = String.valueOf(wit);
+        depo[4] = Float.toString(Bal);
         return depo;
     }
 
@@ -54,10 +62,10 @@ public class lab4 {
         System.out.print("These are you previos transactions:- {");
         for(int j=0;j<i;j++){
             System.out.print("{");
-            for(int k=0;k<3;k++){
+            for(int k=0;k<4;k++){
                 System.out.print(transact[j][k]+",");
             }
-            System.out.print(transact[j][3]+"}");
+            System.out.print(transact[j][4]+"}");
         }
         System.out.println("}");
     }
