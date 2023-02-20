@@ -32,9 +32,9 @@ public class lab4 {
         Bal = Bal+dep;
         depo[0] = dtf.format(now);
         depo[1] = "Deposit";
-        depo[2] = Float.toString(copy);
-        depo[3] = String.valueOf(dep);
-        depo[4] = Float.toString(Bal);
+        depo[2] = "Current Balance :- "+Float.toString(copy);
+        depo[3] = "Amount to be withdrawed :- "+String.valueOf(dep);
+        depo[4] = "New Balance :-"+Float.toString(Bal);
         return depo;
     }
 
@@ -46,15 +46,22 @@ public class lab4 {
         System.out.println("Enter the Amount you want to withdraw :- ");
         wit = scan1.nextInt();
         copy=Bal;
-        if(wit>Bal)
-            System.out.println("You don't have enough balance!!! ");    
-        else
-            Bal = Bal-wit;
+        if(wit>Bal){
+        System.out.println("Withdrawal Failed due to insufficient Balance!!!");
         depo[0] = dtf.format(now);
         depo[1] = "Withdraw";
-        depo[2] = Float.toString(copy);
-        depo[3] = String.valueOf(wit);
-        depo[4] = Float.toString(Bal);
+        depo[2] = "Current Balance :- "+Float.toString(copy);
+        depo[3] = "Amount to be withdrawed :- "+String.valueOf(wit);
+        depo[4] = "Withdrawal Failed due to insufficient Balance";
+        }      
+        else{
+            Bal = Bal-wit;
+            depo[0] = dtf.format(now);
+            depo[1] = "Withdraw";
+            depo[2] = "Current Balance :- "+Float.toString(copy);
+            depo[3] = "Amount to be withdrawed :- "+String.valueOf(wit);
+            depo[4] = "New Balance :-"+Float.toString(Bal);
+        }
         return depo;
     }
 
@@ -66,6 +73,7 @@ public class lab4 {
                 System.out.print(transact[j][k]+",");
             }
             System.out.print(transact[j][4]+"}");
+            System.out.println();
         }
         System.out.println("}");
     }
