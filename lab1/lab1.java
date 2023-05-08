@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Lab1 {
+public class lab1 {
     public static void main(String[] args){
         // Accepting various attributes of the employee
         Scanner scan = new Scanner(System.in);
