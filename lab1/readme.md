@@ -9,24 +9,24 @@ Identify if the employee belongs to the top MNC Companies (Facebook, Google, Mic
   
 Output.   
   
-Enter the name of the Employee.  
-Sreejesh    
-Enter the age of the Employee.    
-23  
-Enter the gender of the Employee.   
-m   
-Enter the state of the Employee.   
-Gujarat   
-Enter the company the Employee works at.   
-Google   
-Enter the salary of the Employee.   
-10000   
------------------------------------------------------------------------------------------   
-Employee Name: Sreejesh   
-Employee Age: 23   
-Employee Gender: Male   
-The Employee is from the western states of India; Preferable work location is in Gujarat   
-The company the employee works for: Google   
-The employee is working in Top MNC Companies.   
-Salary of the Employee: 10000.0   
------------------------------------------------------------------------------------------ 
+Enter the name of the Employee.
+Sreejesh
+Enter the age of the Employee.
+23
+Enter the gender of the Employee.
+m
+Enter the state of the Employee.
+Gujarat
+Enter the company the Employee works at.
+Google
+Enter the salary of the Employee.
+10000
+-----------------------------------------------------------------------------------------
+Employee Name: Sreejesh
+Employee Age: 23
+Employee Gender: Male
+The Employee is from the western states of India; Preferable work location is in Gujarat
+The company the employee works for: Google
+The employee is working in Top MNC Companies.
+Salary of the Employee: 10000.0
+-----------------------------------------------------------------------------------------
