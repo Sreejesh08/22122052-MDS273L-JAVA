@@ -24,7 +24,7 @@ public class lab7 {
                 for (int m = l; m < cnt; m++) {
                         s = s + arr[m];
                 }
-                return (s / cnt);
+                return (s / (cnt-l));
         }
 
         static Float max(Float[] arr, int cnt, int l) {
